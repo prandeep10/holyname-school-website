@@ -1,0 +1,299 @@
+.about-container {
+  background-color: #f8fafc;
+}
+
+/* Hero Section */
+.about-hero {
+  position: relative;
+  height: 70vh;
+  min-height: 600px;
+  background: url('/api/placeholder/1920/1080') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.95), rgba(30, 64, 175, 0.85));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-text {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.mission-statement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.25rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+}
+
+.mission-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Principal Section */
+.principal-section {
+  padding: 6rem 5%;
+  background: white;
+}
+
+.principal-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.principal-image-container {
+  position: relative;
+}
+
+.principal-image-container img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.image-accent {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  background: #1e3a8a;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.principal-content {
+  padding: 2rem;
+}
+
+.principal-content h2 {
+  font-size: 2.5rem;
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.principal-content blockquote {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #64748b;
+  border-left: 4px solid #1e3a8a;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.principal-signature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.principal-signature strong {
+  color: #1e3a8a;
+  font-size: 1.25rem;
+}
+
+.principal-signature span {
+  color: #64748b;
+}
+
+/* Infrastructure Section */
+.infrastructure-section {
+  padding: 6rem 5%;
+  background: #f1f5f9;
+}
+
+.infrastructure-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1e3a8a;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+.infrastructure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.infra-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.infra-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  color: #1e3a8a;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.5rem;
+}
+
+.infra-card h3 {
+  font-size: 1.25rem;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.infra-card p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Achievements Section */
+.achievements-section {
+  padding: 6rem 5%;
+  background: white;
+}
+
+.achievements-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1e3a8a;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.achievement-card {
+  text-align: center;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+}
+
+.achievement-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  line-height: 1;
+}
+
+.achievement-label {
+  color: #64748b;
+  font-size: 1.125rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .principal-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .principal-image-container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-text {
+    font-size: 1.25rem;
+  }
+
+  .mission-statement {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .principal-content h2,
+  .infrastructure-section h2,
+  .achievements-section h2 {
+    font-size: 2rem;
+  }
+
+  .achievement-number {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text {
+    font-size: 1.125rem;
+  }
+
+  .mission-statement {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .principal-content {
+    padding: 1rem;
+  }
+
+  .principal-content blockquote {
+    font-size: 1.125rem;
+    padding-left: 1rem;
+  }
+}

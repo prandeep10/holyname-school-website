@@ -1,0 +1,455 @@
+.faculty-container {
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+/* Hero Section */
+.faculty-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 500px;
+  background: url('/api/placeholder/1920/1080') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.faculty-container .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.95), rgba(30, 64, 175, 0.85));
+}
+
+.faculty-container .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.faculty-container .hero-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.faculty-container .hero-subtitle {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+/* Section Styles */
+.faculty-container .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1e3a8a;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+/* Departments Section */
+.departments-section {
+  padding: 6rem 5%;
+  background: white;
+}
+
+.departments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.department-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.department-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.department-card.active {
+  background: #1e3a8a;
+  color: white;
+}
+
+.department-card.active .dept-icon {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dept-icon {
+  color: #3b82f6;
+  background: #eff6ff;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.department-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Faculty Members Section */
+.faculty-container .faculty-members {
+  padding: 6rem 5%;
+  background: #f1f5f9;
+}
+
+.faculty-container .faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.faculty-container .faculty-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.faculty-container .faculty-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faculty-container .card-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.faculty-container .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.faculty-container .faculty-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.faculty-container .card-content {
+  padding: 2rem;
+}
+
+.faculty-container .card-content h3 {
+  font-size: 1.5rem;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.position {
+  color: #3b82f6;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.qualification {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.experience {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.awards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.award-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  background: #eff6ff;
+  color: #1e40af;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-btn, .linkedin-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+}
+
+.contact-btn:hover {
+  background: #2563eb;
+}
+
+.linkedin-btn {
+  background: #eff6ff;
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+}
+
+.linkedin-btn:hover {
+  background: #dbeafe;
+}
+
+/* Message Section */
+.message-section {
+  padding: 6rem 5%;
+  background: white;
+}
+
+.message-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.message-content h2 {
+  color: #1e3a8a;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.message-content blockquote {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #64748b;
+  font-style: italic;
+  margin-bottom: 2rem;
+  position: relative;
+  padding: 2rem;
+}
+
+.message-content blockquote {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #64748b;
+  font-style: italic;
+  margin-bottom: 2rem;
+  position: relative;
+  padding: 2rem;
+}
+
+.message-content blockquote::before,
+.message-content blockquote::after {
+  content: '"';
+  font-size: 4rem;
+  color: #e2e8f0;
+  font-family: serif;
+  position: absolute;
+  line-height: 1;
+}
+
+.message-content blockquote::before {
+  top: 0;
+  left: 0;
+}
+
+.message-content blockquote::after {
+  bottom: -20px;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.collective-signature {
+  color: #1e3a8a;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .faculty-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .departments-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .department-card {
+    padding: 1.5rem;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+  }
+
+  .message-content blockquote {
+    font-size: 1.125rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .faculty-card {
+    margin: 0 1rem;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+
+  .awards {
+    flex-direction: column;
+  }
+
+  .award-tag {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Animation Classes */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.department-card.active {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Hover Interactions */
+.faculty-card .card-content {
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.faculty-card:hover .card-content {
+  transform: translateY(-10px);
+}
+
+/* Focus States */
+.department-card:focus,
+.contact-btn:focus,
+.linkedin-btn:focus {
+  outline: none;
+  ring: 2px;
+  ring-offset: 2px;
+  ring-color: #3b82f6;
+}
+
+/* Loading States */
+.faculty-card.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.faculty-card.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  .department-card.active {
+    animation: none;
+  }
+  
+  .faculty-card .card-content,
+  .faculty-card:hover .card-content {
+    transform: none;
+  }
+  
+  .faculty-card.loading::after {
+    animation: none;
+  }
+}
